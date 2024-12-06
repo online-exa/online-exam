@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div class="container">
+        <div class="start-screen">
+            <h1 class="heading">Test</h1>
+            <div class="settings">
+                <label for="name">Enter your name</label><br>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="rollno">Enter your Roll no</label><br>
+                <input type="text" id="rollno" name="rollno"><br><br>
+
+                <label for="course">Choose your course</label><br>
+                <select name="course" id="course">
+                    <option value="basic">Basic</option>
+                    <option value="tally">Tally</option>
+                    <option value="web_development">Web Development</option>
+                </select><br><br>
+            </div>
+            <button class="btn start" onclick="validateForm()">Start test</button>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Get values from input fields
+            var name = document.getElementById('name').value;
+            var rollno = document.getElementById('rollno').value;
+
+            // Check if name and rollno are empty
+            if (name === "" || rollno === "") {
+                // If either field is empty, show an alert
+                alert("Both Name and Roll Number must be filled out.");
+                return false;  // Prevent the form from being submitted
+            }
+            
+            // If both fields are filled, proceed with form submission (or other actions)
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
